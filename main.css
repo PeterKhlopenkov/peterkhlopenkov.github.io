@@ -1,0 +1,223 @@
+body, html{
+    background-color: black;
+}
+
+@font-face {
+    font-family: HopperScript;
+    src: url("fonts/HopperScript.ttf");
+}
+
+/* All sections start with 0 opacity for fade in*/
+.section{
+    opacity: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #00a1f1;
+}
+
+a:hover{
+    opacity: 0.5;
+}
+
+/* Background Video */
+.videoWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    z-index: 0;
+}
+
+video {
+    height: 100%;
+    margin-left:60%;
+    transform: translate(-60%);
+}
+
+/*Intro Section*/
+#yoursTruly {
+    padding: 0;
+    border: 0;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left:50%;
+    margin: 0 -47% 0 0;
+    transition: all .5s ease-in-out;
+}
+
+#yoursTruly:hover{
+    font-size: 2.5rem;
+}
+
+#bottomSection{ /* Wrapper for scrollDownArrow and projectsAndMore*/
+    margin: 0 auto;
+    margin-top: 75vh;
+    width:220px;
+}
+
+#projectsAndMore{
+    font-weight: lighter;
+    font-family: "Josefin Sans",sans-serif;
+    color: white;
+    text-align: center;
+    font-size:1.5rem;
+}
+
+#scrollDownArrow{
+    width:50%;
+    padding-left:25%;
+    padding-right: 25%;
+    transition: all .2s ease-in-out;
+    -webkit-animation: flickerAnimation 3s infinite;
+    -moz-animation: flickerAnimation 3s infinite;
+    -o-animation: flickerAnimation 3s infinite;
+    animation: flickerAnimation 3s infinite;
+}
+
+#scrollDownArrow:focus {
+    outline:0;
+}
+
+#scrollDownArrow:hover{
+    transform: scale(1.1);
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:0.3; }
+    50%  { opacity:0.9; }
+    100% { opacity:0.3; }
+}
+@-o-keyframes flickerAnimation{
+    0%   { opacity:0.3; }
+    50%  { opacity:0.9; }
+    100% { opacity:0.3; }
+}
+@-moz-keyframes flickerAnimation{
+    0%   { opacity:0.3; }
+    50%  { opacity:0.9; }
+    100% { opacity:0.3; }
+}
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:0.3; }
+    50%  { opacity:0.9; }
+    100% { opacity:0.3; }
+}
+
+/* Veldt Section */
+.theVeldtText{
+    border: 0;
+    color: black;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    left:39%;
+    z-index: 100;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: right;
+}
+
+#theVeldtHeader{
+    font-family: 'Eutemia I',cursive;
+    text-align: right;
+    font-size: 7rem;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    margin: 0;
+}
+
+#theVeldtDescription{
+    margin-top: 10px;
+}
+
+.theVeldtFull{ /*Wraps video*/
+    opacity: 0;
+}
+
+span.gameplayTag{
+    position:absolute;
+    bottom: 5%;
+    right: 5%;
+    font-family: "Josefin Sans",sans-serif;
+    color: white;
+    opacity: 0;
+}
+
+/*RapBeat Section*/
+#thirdPage{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.rapBeatInfo{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left:50%;
+    margin: 0 -40% 0 0;
+    background-color:rgba(0,0,0,0.7);
+    padding: 30px;
+    z-index: 1;
+}
+
+.rapBeatHeader{
+    color:white;
+    text-align: center;
+    font-family: "Josefin Sans",serif;
+    font-weight: normal;
+    font-size: 7rem;
+    letter-spacing: -3px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.rapBeatDescription{
+    color:white;
+    text-align: center;
+    font-family: "Josefin Sans",serif;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+#googlePlayBadge{
+    display: block;
+    margin: auto;
+    width: 200px;
+}
+
+.rapBeatBackground{
+    background: url(images/rapBeatPicture.JPG) 15%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    z-index: 0;
+    position:fixed;
+    opacity: 0;
+}
+
+/*Info Section*/
+#fourthPage{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    position: relative;
+
+}
+
+.fourthWrapper{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}

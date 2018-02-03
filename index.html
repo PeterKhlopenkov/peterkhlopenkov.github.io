@@ -1,161 +1,112 @@
 <!DOCTYPE html>
+
+<!--
+
+"It is who wrote this mess of code that
+ somehow resulted in a decent looking
+ site."
+    - Peter Khlopenkov, Febuary 2nd 2018
+
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Search For Everything</title>
+    <title>Peter Khlopenkov</title>
 
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <style type="text/css">
-        h1.mainTitle {
-            padding: 0;
-            border: 0;
-            color: black;
-            font-family: HopperScript,cursive;
-            text-align: center;
-            font-size: 7vw;
-            font-weight: lighter;
-            text-shadow: 0.2vw 0.2vw #ffffffff;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            left:50%;
-            margin: 0 -47% 0 0;
-        }
-
-        h2{
-            font-family: HopperScript,cursive;
-            font-weight: lighter;
-            text-align: center;
-            padding: 5px;
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        h3.quoteLeft{
-            font-family: HopperScript,cursive;
-            font-weight: lighter;
-            font-size: 1.5rem;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            padding-right: 10%;
-        }
-
-        h3.quoteRight{
-            font-family: HopperScript,cursive;
-            font-weight: lighter;
-            font-size: 1.5rem;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            padding-left: 10%;
-            text-align: right;
-        }
-
-        p{
-            font-family: HopperScript,cursive;
-            font-weight: lighter;
-            text-align: center;
-        }
-
-        a{
-            color: lightblue;
-            text-decoration: none;
-        }
-
-        body, html{
-            margin:0;
-            border:0;
-            outline:0;
-            padding:0;
-            height: 100%;
-            width: 100%;
-        }
-
-        div.firstPage {
-            padding:0;
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            background:linear-gradient(to top, #ffffff, #ffffff00 50%), url(theSearchForEveythingWebsiteMainImage.jpg) right 0;
-            background-size: cover;
-        }
-
-        div.secondPage{
-            padding-top: 15vh;
-            padding-right: 20vw;
-            padding-left: 20vw;
-            padding-bottom: 10vh;
-            margin: 0;
-            width: 60vw;
-            height: fit-content;
-            background: white;
-        }
-
-        div.secondInner{
-            width:100%;
-            height:100%;
-            background-color: white;
-        }
-
-        @font-face {
-            font-family: HopperScript;
-            src: url("fonts/HopperScript.ttf");
-        }
-    </style>
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="libraries/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
+
 <body>
 
-    <div class="firstPage">
-        <script>
-            $(window).scroll(function(){
-                $(".firstPage").css("opacity", 1 - $(window).scrollTop() / 700);
-            });
-        </script>
-        <h1 class="mainTitle">The Search For Everything</h1>
-    </div>
+<div class="videoWrapper theVeldtIntro">
+    <video autoplay>
+        <source src="video/preAlphaGameplayFootageIntro.mp4" type="video/mp4">
+    </video>
+</div>
 
-    <div class="secondPage">
-        <div class="secondInner">
-            <h2>What is The Search For Everything?</h2>
-            <div style="background: black; width: 100%; height: 2px;" ></div>
+<div class="rapBeatBackground">
 
-            <h3 class="quoteLeft">"The Search For Everything is a metaphor for <span style="color: forestgreen">life</span>."</h3>
+</div>
 
-            <p>
-                It is every <span style="color: deeppink">feeling</span>, <span style="color: #1f66e5">adventure</span>, and moment that we ever experience. <br/>
-                All of these moments make up The Search, <br/>
-                all of these moments make us who we are.
-            </p>
+<div class="videoWrapper theVeldtFull">
+    <video id="gameplayFootageFull" loop>
+        <source src="video/preAlphaGameplayFootageFullLowerRes.mp4" type="video/mp4">
+    </video>
 
-            <h3 class="quoteRight">"Life isn't measured by how many breaths we take, but by the moments that take our breath away."</h3>
+    <span class="gameplayTag">Pre-Alpha gameplay footage.</span>
 
-            <p>
-                Everyone is part of The Search For Everything. <br/>
-                Some of our Searches take us around the world, <br/>
-                some of our Searches impact our local community, <br/>
-                but as hard as it is to believe,
-            </p>
+</div>
 
-            <h3 class="quoteLeft">"None of our seven billion Searches are quite the same."</h3>
+<div id="fullpage">
 
-            <p>
-                Here is part of my Search: <br/>
+    <div class="section" id="firstPage" data-anchor="namepage">
+        <h1 id="yoursTruly">Peter Khlopenkov</h1>
 
-                <a href="blog.html">
-                    Blog
-                </a>
-                <br/>
-
-                <a href="https://www.youtube.com/channel/UCQq-DrADr3mpfC-q0NDCVEA">
-                    <span style="color: red">YouTube</span>
-                </a>
-
-            </p>
-
-
+        <div id="bottomSection">
+            <h1 id="projectsAndMore">Projects & More</h1>
+            <input type="image" src="images/arrow.png" id="scrollDownArrow" onclick="scrollDown()"/>
         </div>
     </div>
 
+    <div class="section" id="secondPage" data-anchor="TheVeldt">
+        <div class="theVeldtText">
+            <h6 id="theVeldtHeader">The Veldt</h6>
+            <p id="theVeldtDescription">
+            An open world<br>
+            mobile game.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="section" id="thirdPage" data-anchor="RapBeat">
+        <div class="rapBeatInfo">
+                <h1 class="rapBeatHeader"><a href="https://play.google.com/store/apps/details?id=peterkhlopenkov.rapbeat&hl=en" style="color: white">Rap Beat</a></h1>
+                <h2 class="rapBeatDescription">Amplifying mobile beat production.</h2>
+                <h2 class="rapBeatDescription">Over 20,000 downloads.</h2>
+                <h2 class="rapBeatDescription">Built natively for Android.</h2>
+                <a href='https://play.google.com/store/apps/details?id=peterkhlopenkov.rapbeat&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                    <img alt='Get it on Google Play' id="googlePlayBadge" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+                </a>
+        </div>
+    </div>
+
+    <div class="section" id="fourthPage" data-anchor="MoreInfo">
+        <div class="fourthWrapper" id="fw">
+            <h1>Peter Khlopenkov</h1>
+            <h2>Currently working at <span style="color:#50B83C">Shopify</span> as a <a href="https://www.mydevlife.ca/" style="color:#49C0BE">BCS intern.</a></h2>
+            <h2>Pursuing a Bachelor's Degree in Computer Science at <span style="color:#e31936">Carleton</span> University.</h2>
+
+            <h2>
+                <a href="mailto:peterkhlopenkov@hotmail.com">Shoot me an e-mail</a> if you need a...
+            </h2>
+            <h2><a href="#RapBeat" style="color:#19e3b1">android developer.</a></h2>
+            <h2><a href="#TheVeldt" style="color:#00cccc">game developer.</a></h2>
+            <h2><a href="index%20copy.html" style="color:#cc0055">web developer.</a></h2>
+            <h2 style="color:#990000">guitarist.</h2>
+            <hr>
+            <h2>
+                <a href="mailto:peterkhlopenkov@hotmail.com">e-mail.</a>
+                <a href="https://github.com/PeterKhlopenkov" style="color:#999">GitHub.</a>
+                <a href="https://play.google.com/store/apps/dev?id=8202416247251974203&hl=en" style="color:#A4C639">Android.</a>
+                <a href="https://www.linkedin.com/in/peter-khlopenkov-372162134/" style="color:#0077b5">LinkedIn.</a>
+            </h2>
+            <h3>
+                <a href="https://www.youtube.com/channel/UCQq-DrADr3mpfC-q0NDCVEA" style="color: #FF0000">YouTube.</a>
+                <a href="html/blog.html" style="color: orangered">Blog.</a>
+            </h3>
+            <a href="html/thesearchforeverything.html" style="color: hotpink">The Search For Everything.</a>
+        </div>
+    </div>
+
+</div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="libraries/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="libraries/jquery.fullPage.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
