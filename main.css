@@ -139,6 +139,7 @@ video {
     font-weight: lighter;
     letter-spacing: 0.1rem;
     margin: 0;
+    line-height: 110px;
 }
 
 #theVeldtDescription{
