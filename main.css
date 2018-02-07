@@ -7,6 +7,11 @@ body, html{
     src: url("fonts/HopperScript.ttf");
 }
 
+@font-face {
+    font-family: Eutemia;
+    src: url("fonts/Eutemia.ttf");
+}
+
 /* All sections start with 0 opacity for fade in*/
 .section{
     opacity: 0;
@@ -128,7 +133,7 @@ video {
 }
 
 #theVeldtHeader{
-    font-family: 'Eutemia I',cursive;
+    font-family: Eutemia,sans-serif;
     text-align: right;
     font-size: 7rem;
     font-weight: lighter;

@@ -37,7 +37,7 @@ $(document).ready(function() {
             }
 
             leavingSection.fadeTo(300,0);
-        }
+        },
     });
 
     $(".active").fadeTo(2000,1); /*fade in active section on document load*/
