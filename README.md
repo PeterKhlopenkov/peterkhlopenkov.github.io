@@ -1,3 +1,3 @@
 # peterkhlopenkov.github.io
 
-My personal website, temporarily hosted on github.
+My old personal website, find the new one at peterkhlopenkov.com.
